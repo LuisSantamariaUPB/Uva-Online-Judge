@@ -19,12 +19,12 @@ public class p10919 {
 		//Courses selected
 		//c r courses
 		int numCourses,numCategories;
-		do {
+		while(sc.hasNextLine()){
 			boolean bandera = true;
-			numCourses = sc.nextInt();
+			String[] entrada = sc.nextLine().split(" ");
+			numCourses = Integer.parseInt(entrada[0]);
 			if(numCourses==0) break;
-			numCategories = sc.nextInt();
-			sc.nextLine();
+			numCategories = Integer.parseInt(entrada[1]);
 			String cursosSelected[] = sc.nextLine().split(" ");
 			int count;
 			for (int i = 0; i < numCategories; i++) {
@@ -55,8 +55,8 @@ public class p10919 {
 			}
 			else System.out.println("no");
 			
-		} while (true);
-		
+		}
+		sc.close();
 		
 		
 	}
